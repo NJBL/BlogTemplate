@@ -13,14 +13,15 @@ module.exports = {
       // Verify we got a good "db" object
       if (db)
       {
-        _db = db.db("blogDB");
+        _db = db.db("blog");
         console.log("Successfully connected to MongoDB."); 
       }
       return callback(err);
-         });
+    });
   },
  
   getDb: function () {
+    console.log("getDB");
     return _db;
   },
 };
